@@ -6,7 +6,7 @@ const app = express();
 app.get('/networkInfo', async (req, res) => {
  const clientIpAddress = req.headers['x-forwarded-for'] || req.ip; // Retrieve the client's public IP address
  const serverMacAddress = await getmac(); // Retrieve the server's MAC address
- const serverComputerName = os.hostname(); // Retrieve the server's computer name
+ const serverComputerName = os.hostname(); 
 
  const networkInfoResponse = {
     macAddress: serverMacAddress,
